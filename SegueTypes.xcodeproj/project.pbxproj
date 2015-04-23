@@ -13,6 +13,7 @@
 		EAF85AE51AE9743C0002A088 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF85AE41AE9743C0002A088 /* Images.xcassets */; };
 		EAF85AE81AE9743C0002A088 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF85AE61AE9743C0002A088 /* LaunchScreen.xib */; };
 		EAF85AF41AE9743C0002A088 /* SegueTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF85AF31AE9743C0002A088 /* SegueTypesTests.swift */; };
+		EAF85AFE1AE976380002A088 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF85AFD1AE976380002A088 /* ChildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EAF85AED1AE9743C0002A088 /* SegueTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegueTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF85AF21AE9743C0002A088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAF85AF31AE9743C0002A088 /* SegueTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTypesTests.swift; sourceTree = "<group>"; };
+		EAF85AFD1AE976380002A088 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				EAF85AE11AE9743C0002A088 /* Main.storyboard */,
 				EAF85ADF1AE9743C0002A088 /* MainViewController.swift */,
+				EAF85AFD1AE976380002A088 /* ChildViewController.swift */,
 				EAF85ADB1AE9743C0002A088 /* Supporting Files */,
 			);
 			path = SegueTypes;
@@ -214,6 +217,7 @@
 			files = (
 				EAF85AE01AE9743C0002A088 /* MainViewController.swift in Sources */,
 				EAF85ADE1AE9743C0002A088 /* AppDelegate.swift in Sources */,
+				EAF85AFE1AE976380002A088 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
