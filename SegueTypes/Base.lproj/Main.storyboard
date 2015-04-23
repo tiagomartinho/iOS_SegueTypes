@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zDe-P2-lR2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SegueTypes" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUs-OG-Pr5">
-                                <rect key="frame" x="279" y="28" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN VIEW CONTROLLER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUs-OG-Pr5">
+                                <rect key="frame" x="197" y="28" width="207" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,8 +35,8 @@
                         <color key="backgroundColor" red="0.094117647060000004" green="0.75294117650000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="51A-zw-6Ur" secondAttribute="centerY" id="Dr4-Ij-R2Y"/>
+                            <constraint firstItem="XUs-OG-Pr5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="PIt-9k-A1U"/>
                             <constraint firstItem="XUs-OG-Pr5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgr-Sx-eG3"/>
-                            <constraint firstItem="XUs-OG-Pr5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="u3J-AN-NpK"/>
                             <constraint firstAttribute="centerY" secondItem="XUs-OG-Pr5" secondAttribute="centerY" id="vbh-Fh-3cf"/>
                             <constraint firstAttribute="centerX" secondItem="51A-zw-6Ur" secondAttribute="centerX" id="xAB-Ak-RBu"/>
                         </constraints>
@@ -46,12 +46,51 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="e5X-KK-Myh"/>
                     <connections>
                         <segue destination="iRI-jO-ZEB" kind="show" identifier="showSegue" id="thW-R7-8Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1153" y="-121"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="usp-ne-Jte">
+            <objects>
+                <viewController id="Zpy-mX-auC" customClass="MainViewController" customModule="SegueTypes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R3Y-Yn-oIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMv-1E-Nwb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ylR-Zl-92Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-ED-EXh">
+                                <rect key="frame" x="257" y="285" width="87" height="30"/>
+                                <state key="normal" title="Show Segue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSegue:" destination="Zpy-mX-auC" eventType="touchUpInside" id="dxU-0j-II5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="sUJ-ED-EXh" secondAttribute="centerY" id="GqL-hR-Who"/>
+                            <constraint firstAttribute="centerX" secondItem="sUJ-ED-EXh" secondAttribute="centerX" id="sB4-Mi-rg2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xVg-tV-ZQZ"/>
+                    <connections>
+                        <segue destination="iRI-jO-ZEB" kind="show" identifier="showSegue" id="e56-x4-3pF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0E-MN-aYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="610"/>
         </scene>
         <!--Child View Controller-->
         <scene sceneID="UaQ-IV-tbW">
@@ -84,7 +123,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omG-J3-hPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="355"/>
+            <point key="canvasLocation" x="2636" y="-121"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Glc-X3-6au">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zDe-P2-lR2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DSa-vn-Wq0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6PN-BW-Jt9"/>
+                        <segue destination="aza-Bh-Flf" kind="relationship" relationship="viewControllers" id="Rt2-su-TqO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcI-st-G15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="355"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ll7-3p-ZDb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aza-Bh-Flf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8Kx-6m-viQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xef-CT-WNj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zpy-mX-auC" kind="relationship" relationship="rootViewController" id="hlD-fh-dRm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb7-vS-8wo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="610"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e56-x4-3pF"/>
+    </inferredMetricsTieBreakers>
 </document>

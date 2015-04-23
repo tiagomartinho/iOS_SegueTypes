@@ -6,4 +6,3 @@ class MainViewController: UIViewController
         performSegueWithIdentifier("showSegue", sender: self)
     }
 }
-
