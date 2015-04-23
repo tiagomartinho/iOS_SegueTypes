@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Show-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SegueTypes" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,14 +46,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="e5X-KK-Myh"/>
+                    <tabBarItem key="tabBarItem" title="Show" id="e5X-KK-Myh"/>
                     <connections>
                         <segue destination="iRI-jO-ZEB" kind="show" identifier="showSegue" id="thW-R7-8Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="-121"/>
+            <point key="canvasLocation" x="1257" y="-853"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="usp-ne-Jte">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0E-MN-aYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="610"/>
+            <point key="canvasLocation" x="2016" y="290"/>
         </scene>
         <!--Child View Controller-->
         <scene sceneID="UaQ-IV-tbW">
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omG-J3-hPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="-121"/>
+            <point key="canvasLocation" x="3120" y="311"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Glc-X3-6au">
@@ -152,17 +152,18 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6PN-BW-Jt9"/>
                         <segue destination="aza-Bh-Flf" kind="relationship" relationship="viewControllers" id="Rt2-su-TqO"/>
+                        <segue destination="4Ry-Ld-RF1" kind="relationship" relationship="viewControllers" id="rHa-79-9cG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcI-st-G15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="355"/>
         </scene>
-        <!--Item-->
+        <!--Show Inside Nav-->
         <scene sceneID="Ll7-3p-ZDb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aza-Bh-Flf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8Kx-6m-viQ"/>
+                    <tabBarItem key="tabBarItem" title="Show Inside Nav" id="8Kx-6m-viQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xef-CT-WNj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -175,10 +176,94 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb7-vS-8wo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="610"/>
+            <point key="canvasLocation" x="1257" y="290"/>
+        </scene>
+        <!--Present Modally-->
+        <scene sceneID="cfK-tU-wfk">
+            <objects>
+                <viewController id="4Ry-Ld-RF1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yib-5W-VQx"/>
+                        <viewControllerLayoutGuide type="bottom" id="D34-Gf-UQx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Dk-kR-sqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-ay-swi">
+                                <rect key="frame" x="253" y="247" width="96" height="30"/>
+                                <state key="normal" title="Cover Vertical">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iRI-jO-ZEB" kind="presentation" identifier="coverVertical" modalTransitionStyle="coverVertical" id="7ev-UB-2Ne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keY-1n-nl7">
+                                <rect key="frame" x="251" y="285" width="99" height="30"/>
+                                <state key="normal" title="Flip Horizontal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iRI-jO-ZEB" kind="presentation" identifier="flipHorizontal" modalTransitionStyle="flipHorizontal" id="ua1-2M-03X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-sc-UXe">
+                                <rect key="frame" x="253" y="323" width="95" height="30"/>
+                                <state key="normal" title="Cross Disolve">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iRI-jO-ZEB" kind="presentation" identifier="crossDisolve" modalTransitionStyle="crossDissolve" id="g3T-Ta-X3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz6-vO-Z67">
+                                <rect key="frame" x="262" y="361" width="76" height="30"/>
+                                <state key="normal" title="Partial Curl">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iRI-jO-ZEB" kind="presentation" identifier="partialCurl" modalTransitionStyle="partialCurl" id="ETW-cx-j0S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUj-Sz-DW6">
+                                <rect key="frame" x="276" y="209" width="49" height="30"/>
+                                <state key="normal" title="Default">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iRI-jO-ZEB" kind="presentation" identifier="default" id="0CK-tt-RhX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="keY-1n-nl7" secondAttribute="centerY" id="1uB-P1-OeT"/>
+                            <constraint firstAttribute="centerX" secondItem="sUj-Sz-DW6" secondAttribute="centerX" id="4uX-yv-vtT"/>
+                            <constraint firstItem="4VJ-sc-UXe" firstAttribute="top" secondItem="keY-1n-nl7" secondAttribute="bottom" constant="8" symbolic="YES" id="Dem-iJ-neO"/>
+                            <constraint firstAttribute="centerX" secondItem="4VJ-sc-UXe" secondAttribute="centerX" id="MD4-zs-vRY"/>
+                            <constraint firstAttribute="centerX" secondItem="0P4-ay-swi" secondAttribute="centerX" id="MzQ-p7-6PG"/>
+                            <constraint firstItem="keY-1n-nl7" firstAttribute="top" secondItem="0P4-ay-swi" secondAttribute="bottom" constant="8" symbolic="YES" id="XRk-KF-XKi"/>
+                            <constraint firstAttribute="centerX" secondItem="keY-1n-nl7" secondAttribute="centerX" id="Y6L-4q-BdP"/>
+                            <constraint firstItem="0P4-ay-swi" firstAttribute="leading" secondItem="sUj-Sz-DW6" secondAttribute="trailing" constant="8" symbolic="YES" id="Zfr-ag-ac1"/>
+                            <constraint firstItem="xz6-vO-Z67" firstAttribute="top" secondItem="4VJ-sc-UXe" secondAttribute="bottom" constant="8" symbolic="YES" id="gdk-Qj-tKv"/>
+                            <constraint firstAttribute="centerX" secondItem="xz6-vO-Z67" secondAttribute="centerX" id="udT-dh-Zfa"/>
+                            <constraint firstItem="0P4-ay-swi" firstAttribute="top" secondItem="sUj-Sz-DW6" secondAttribute="bottom" constant="8" symbolic="YES" id="w26-Vw-ROw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zfr-ag-ac1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Present Modally" id="Iny-Si-B4S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39L-aA-aXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="1442"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e56-x4-3pF"/>
+        <segue reference="thW-R7-8Cr"/>
     </inferredMetricsTieBreakers>
 </document>
